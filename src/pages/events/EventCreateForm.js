@@ -21,16 +21,17 @@ function EventCreateForm() {
   const [eventData, setEventData] = useState({
     title: "",
     description: "",
-    location:"",
+    location: "",
     image: "",
     start_time: "",
     end_time: "",
   });
-  const { title, description, location, image, start_time, end_time } = eventData;
+  const { title, description, location, image, start_time, end_time } =
+    eventData;
 
-  const imageInput = useRef(null)
+  const imageInput = useRef(null);
 
-  const history = useHistory()
+  const history = useHistory();
 
   const handleChange = (event) => {
     setEventData({
@@ -50,31 +51,30 @@ function EventCreateForm() {
   };
 
   const handleSubmit = async (event) => {
-    event.preventDefault()
+    event.preventDefault();
     const formData = new FormData();
 
-    formData.append('title', title)
-    formData.append('description', description)
-    formData.append('location', location)
-    formData.append('image', imageInput.current.files[0])
+    formData.append("title", title);
+    formData.append("description", description);
+    formData.append("location", location);
+    formData.append("image", imageInput.current.files[0]);
     // Format start_time and end_time
     const formattedStartTime = new Date(start_time).toISOString();
     const formattedEndTime = new Date(end_time).toISOString();
 
-    formData.append('start_time', formattedStartTime);
-    formData.append('end_time', formattedEndTime);
+    formData.append("start_time", formattedStartTime);
+    formData.append("end_time", formattedEndTime);
 
     try {
-      const {data} = await axiosReq.post('/events/', formData);
-      history.push(`/events/${data.id}`)
-
-    } catch(err){
-      console.log(err)
-      if (err.response?.status !== 401){
-        setErrors(err.response?.data)
+      const { data } = await axiosReq.post("/events/", formData);
+      history.push(`/events/${data.id}`);
+    } catch (err) {
+      console.log(err);
+      if (err.response?.status !== 401) {
+        setErrors(err.response?.data);
       }
     }
-  }
+  };
 
   const textFields = (
     <div className="text-center">
