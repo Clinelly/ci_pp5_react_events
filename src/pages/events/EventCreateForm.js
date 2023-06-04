@@ -57,8 +57,12 @@ function EventCreateForm() {
     formData.append('description', description)
     formData.append('location', location)
     formData.append('image', imageInput.current.files[0])
-    formData.append('start_time', start_time)
-    formData.append('end_time', end_time)
+    // Format start_time and end_time
+    const formattedStartTime = new Date(start_time).toISOString();
+    const formattedEndTime = new Date(end_time).toISOString();
+
+    formData.append('start_time', formattedStartTime);
+    formData.append('end_time', formattedEndTime);
 
     try {
       const {data} = await axiosReq.post('/events/', formData);
@@ -112,7 +116,7 @@ function EventCreateForm() {
         <Form.Group>
           <Form.Label>Start Time</Form.Label>
           <Form.Control
-            type="date"
+            type="datetime-local"
             placeholder="Start Time"
             name="start_time"
             value={start_time}
@@ -123,7 +127,7 @@ function EventCreateForm() {
         <Form.Group>
           <Form.Label>End Time</Form.Label>
           <Form.Control
-            type="date"
+            type="datetime-local"
             placeholder="End Time"
             name="end_time"
             value={end_time}
