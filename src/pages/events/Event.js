@@ -49,7 +49,7 @@ const Event = (props) => {
 
   const handleUnlike = async () => {
     try {
-      await axiosRes.delete(`/likes/${like_id}/`);
+      await axiosRes.delete(`/likes/${like_id}`);
       setEvents((prevEvents) => ({
         ...prevEvents,
         results: prevEvents.results.map((event) => {
@@ -85,7 +85,7 @@ const Event = (props) => {
 
   const handleUnattending = async () => {
     try {
-      await axiosRes.delete(`/attending/${attending_id}/`);
+      await axiosRes.delete(`/attending/${attending_id}`);
       setEvents((prevEvents) => ({
         ...prevEvents,
         results: prevEvents.results.map((event) => {
@@ -160,7 +160,7 @@ const Event = (props) => {
             >
               <i className="fa-solid fa-circle-check" />
             </OverlayTrigger>
-          ) : like_id ? (
+          ) : attending_id ? (
             <span onClick={handleUnattending}>
               <i className={`fa-solid fa-circle-check ${styles.Check}`} />
             </span>
