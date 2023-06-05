@@ -1,28 +1,69 @@
 import styles from "./App.module.css";
 import NavBar from "./components/NavBar";
 import Container from "react-bootstrap/Container";
-import {Route, Switch} from "react-router-dom";
-import './api/axiosDefaults';
+import { Route, Switch } from "react-router-dom";
+import "./api/axiosDefaults";
 import SignUpForm from "./pages/auth/SignUpForm";
 import SignInForm from "./pages/auth/SignInForm";
 import EventCreateForm from "./pages/events/EventCreateForm";
 import EventPage from "./pages/events/EventPage";
-
+import EventsPage from "./pages/events/EventsPage";
+import { useCurrentUser } from "./contexts/CurrentUserContext";
 
 function App() {
-
+  const currentUser = useCurrentUser();
+  const profile_id = currentUser?.profile_id || "";
   return (
-
     <div className={styles.App}>
       <NavBar />
       <Container className={styles.Main}>
         <Switch>
-          <Route exact path="/" render={()=><h1>Home Page</h1>} />
-          <Route exact path="/signin" render={()=><SignInForm />} />
-          <Route exact path="/signup" render={()=><SignUpForm />} />
-          <Route exact path="/events/create" render={()=><EventCreateForm />} />
-          <Route exact path="/events/:id" render={()=><EventPage />} />
-          <Route render={()=><h1>404 Page Not Found</h1>} />
+          <Route
+            exact
+            path="/"
+            render={() => (
+              <EventsPage message="No results found. Try a different keyword." />
+            )}
+          />
+          <Route
+            exact
+            path="/feed"
+            render={() => (
+              <EventsPage
+                message="No results found. Try a different keyword or follow a user."
+                filter={`owner__followed__owner__profile=${profile_id}&`}
+              />
+            )}
+          />
+          <Route
+            exact
+            path="/liked"
+            render={() => (
+              <EventsPage
+                message="No results found. Try a different keyword or like an event."
+                filter={`likes__owner__profile=${profile_id}&ordering=-likes__created_at&`}
+              />
+            )}
+          />
+          <Route
+            exact
+            path="/attending"
+            render={() => (
+              <EventsPage
+                message="No results found. Try a different keyword or attend an event."
+                filter={`attending__owner__profile=${profile_id}&ordering=-attending__created_at&`}
+              />
+            )}
+          />
+          <Route exact path="/signin" render={() => <SignInForm />} />
+          <Route exact path="/signup" render={() => <SignUpForm />} />
+          <Route
+            exact
+            path="/events/create"
+            render={() => <EventCreateForm />}
+          />
+          <Route exact path="/events/:id" render={() => <EventPage />} />
+          <Route render={() => <h1>404 Page Not Found</h1>} />
         </Switch>
       </Container>
     </div>
