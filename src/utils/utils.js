@@ -1,4 +1,3 @@
-import axios from "axios";
 import { axiosReq } from "../api/axiosDefaults";
 
 export const fetchMoreData = async (resource, setResource) => {
@@ -8,7 +7,7 @@ export const fetchMoreData = async (resource, setResource) => {
       ...prevResource,
       next: data.next,
       results: data.results.reduce((acc, cur) => {
-        return acc.some((accResult) => accResult.id == cur.id)
+        return acc.some((accResult) => accResult.id === cur.id)
           ? acc
           : [...acc, cur];
       }, prevResource.results),
