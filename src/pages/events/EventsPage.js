@@ -13,6 +13,8 @@ import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 
 import NoResults from "../../assets/no-results.png";
+import InfiniteScroll from "react-infinite-scroll-component";
+import { fetchMoreData } from "../../utils/utils";
 
 function EventsPage({ message, filter = "" }) {
   const [events, setEvents] = useState({ results: [] });
@@ -59,9 +61,18 @@ function EventsPage({ message, filter = "" }) {
         {hasLoaded ? (
           <>
             {events.results.length ? (
-              events.results.map((event) => (
-                <Event key={event.id} {...event} setEvents={setEvents} />
-              ))
+              <InfiniteScroll 
+                children={
+                  events.results.map((event) => (
+                    <Event key={event.id} {...event} setEvents={setEvents} />
+                  ))
+                }
+                dataLength={events.results.length}
+                loader={<Asset spinner/>}
+                hasMore={!!events.next}
+                next={() => fetchMoreData(events, setEvents)}
+              />
+
             ) : (
               <Container className={appStyles.Content}>
                 <Asset src={NoResults} message={message} />
