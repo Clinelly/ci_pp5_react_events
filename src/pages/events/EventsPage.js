@@ -14,27 +14,48 @@ import { axiosReq } from "../../api/axiosDefaults";
 
 import NoResults from "../../assets/no-results.png";
 
-function EventsPage(message, filter = "") {
+function EventsPage({ message, filter = "" }) {
   const [events, setEvents] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
 
+  const [search, setSearch] = useState("");
+
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const { data } = await axiosReq.get(`/events/?${filter}`);
+        const { data } = await axiosReq.get(
+          `/events/?${filter}search=${search}`
+        );
         setEvents(data);
         setHasLoaded(true);
-      } catch (err) {}
+      } catch (err) {
+        console.log(err);
+      }
     };
     setHasLoaded(false);
-    fetchEvents();
-  }, [filter, pathname]);
+    const timer = setTimeout(() => {
+      fetchEvents();
+    }, 1000);
+    return () => {
+      clearTimeout(timer);
+    }
+  }, [filter, search, pathname]);
 
   return (
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
         <p>Popular profiles mobile</p>
+        <i className={`fa-brands fa-searchengin ${styles.SearchIcon}`} />
+        <Form className={styles.SearchBar} onSubmit={(e) => e.preventDefault()}>
+          <Form.Control
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            type="text"
+            className="mr-sm-2"
+            placeholder="Search events"
+          ></Form.Control>
+        </Form>
         {hasLoaded ? (
           <>
             {events.results.length ? (
@@ -49,7 +70,7 @@ function EventsPage(message, filter = "") {
           </>
         ) : (
           <Container>
-            <Asset spinner/>
+            <Asset spinner />
           </Container>
         )}
       </Col>
