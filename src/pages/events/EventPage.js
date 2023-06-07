@@ -11,7 +11,7 @@ import { axiosReq } from "../../api/axiosDefaults";
 
 import CommentCreateForm from "../comments/CommentCreateForm";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import Comment from "../comments/Comment"
+import Comment from "../comments/Comment";
 
 function EventPage() {
   const { id } = useParams();
@@ -55,7 +55,14 @@ function EventPage() {
             "Comments"
           ) : null}
           {comments.results.length ? (
-            comments.results.map((comment) => <Comment key={comment.id} {...comment}/>)
+            comments.results.map((comment) => (
+              <Comment
+                key={comment.id}
+                {...comment}
+                setEvent={setEvent}
+                setComments={setComments}
+              />
+            ))
           ) : currentUser ? (
             <span>Be the first to comment!</span>
           ) : (
