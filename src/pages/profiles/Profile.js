@@ -1,8 +1,8 @@
 import React from "react";
-import styles from "../../styles/Pofile.module.css";
+import styles from "../../styles/Profile.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import { Button } from "react-bootstrap";
 
@@ -25,16 +25,25 @@ const Profile = (props) => {
       <div className={`mx-2 ${styles.WordBreak}`}>
         <strong>{owner}</strong>
       </div>
-      <div className={`text-right ${!mobile && 'ml-auto'}`}>
-        {!mobile && currentUser && !is_owner (
-          following_id ? (
-            <Button className={`${btnStyles.Button} ${btnStyles.BlackOutline}`}
-            onClick={() => {}}>Unfollow</Button>
+      <div className={`text-right ${!mobile && "ml-auto"}`}>
+        {!mobile &&
+          currentUser &&
+          !is_owner &&
+          (following_id ? (
+            <Button
+              className={`${btnStyles.Button} ${btnStyles.BlackOutline}`}
+              onClick={() => {}}
+            >
+              unfollow
+            </Button>
           ) : (
-            <Button className={`${btnStyles.Button} ${btnStyles.Black}`}
-            onClick={() => {}}>Follow</Button>
-          )
-        )}
+            <Button
+              className={`${btnStyles.Button} ${btnStyles.Black}`}
+              onClick={() => {}}
+            >
+              follow
+            </Button>
+          ))}
       </div>
     </div>
   );
