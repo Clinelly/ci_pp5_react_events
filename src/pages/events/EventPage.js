@@ -55,14 +55,20 @@ function EventPage() {
             "Comments"
           ) : null}
           {comments.results.length ? (
-            comments.results.map((comment) => (
-              <Comment
-                key={comment.id}
-                {...comment}
-                setEvent={setEvent}
-                setComments={setComments}
-              />
-            ))
+            <InfiniteScroll
+              children={comments.results.map((comment) => (
+                <Comment
+                  key={comment.id}
+                  {...comment}
+                  setEvent={setEvent}
+                  setComments={setComments}
+                />
+              ))}
+              dataLength={comments.results.length}
+              loader={<Asset spinner />}
+              hasMore={!!comments.next}
+              next={() => fetchMoreData(comments, setComments)}
+            />
           ) : currentUser ? (
             <span>Be the first to comment!</span>
           ) : (
