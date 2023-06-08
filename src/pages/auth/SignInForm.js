@@ -15,10 +15,11 @@ import styles from "../../styles/SignInUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
-
+import { useRedirectUser } from "../../hooks/useRedirectUser";
 
 function SignInForm() {
   const setCurrentUser = useSetCurrentUser();
+  useRedirectUser("loggedIn");
   const [signInData, setSignInData] = useState({
     username: "",
     password: "",
@@ -31,9 +32,9 @@ function SignInForm() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const {data} = await axios.post("/dj-rest-auth/login/", signInData);
-      setCurrentUser(data.user)
-      history.push("/");
+      const { data } = await axios.post("/dj-rest-auth/login/", signInData);
+      setCurrentUser(data.user);
+      history.goBack();
     } catch (err) {
       setErrors(err.response?.data);
     }

@@ -15,8 +15,10 @@ import Asset from "../../components/Asset";
 import { Image } from "react-bootstrap";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
+import { useRedirectUser } from "../../hooks/useRedirectUser";
 
 function EventCreateForm() {
+  useRedirectUser("loggedOut");
   const [errors, setErrors] = useState({});
   const [eventData, setEventData] = useState({
     title: "",

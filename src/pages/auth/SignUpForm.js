@@ -1,45 +1,53 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import styles from "../../styles/SignInUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 
-import { Form, Button, Image, Col, Row, Container, Alert } from "react-bootstrap";
+import {
+  Form,
+  Button,
+  Image,
+  Col,
+  Row,
+  Container,
+  Alert,
+} from "react-bootstrap";
 import axios from "axios";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { useRedirectUser } from "../../hooks/useRedirectUser";
 
 const SignUpForm = () => {
+  useRedirectUser("loggedIn");
   const [signUpData, setSignUpData] = useState({
-    username: '',
-    password1: '',
-    password2: ''
+    username: "",
+    password1: "",
+    password2: "",
   });
 
-  const {username, password1, password2} = signUpData;
+  const { username, password1, password2 } = signUpData;
 
-  const [errors, setErrors] = useState({})
+  const [errors, setErrors] = useState({});
 
-  const history = useHistory()
+  const history = useHistory();
 
   const handleChange = (event) => {
     setSignUpData({
       ...signUpData,
-      [event.target.name]: event.target.value
-    })
-  }
+      [event.target.name]: event.target.value,
+    });
+  };
 
- const handleSubmit = async (event) => {
-  event.preventDefault();
-  try {
-    await axios.post('/dj-rest-auth/registration/', signUpData);
-    history.push('/signin')
-  } catch(err){
-    setErrors(err.response?.data)
-  }
- }
-
-
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      await axios.post("/dj-rest-auth/registration/", signUpData);
+      history.push("/signin");
+    } catch (err) {
+      setErrors(err.response?.data);
+    }
+  };
 
   return (
     <Row className={styles.Row}>
@@ -49,58 +57,66 @@ const SignUpForm = () => {
 
           <Form onSubmit={handleSubmit}>
             <Form.Group controlId="username">
-                <Form.Label>Username</Form.Label>
-                <Form.Control 
-                className={styles.Input} 
-                type="text" 
-                placeholder="Enter username" 
-                name="username" 
-                value={username} 
+              <Form.Label>Username</Form.Label>
+              <Form.Control
+                className={styles.Input}
+                type="text"
+                placeholder="Enter username"
+                name="username"
+                value={username}
                 onChange={handleChange}
-                />
+              />
             </Form.Group>
-            {errors.username?.map((message, idx) => 
-            <Alert variant="warning" key={idx}>{message}</Alert>
-            )}
+            {errors.username?.map((message, idx) => (
+              <Alert variant="warning" key={idx}>
+                {message}
+              </Alert>
+            ))}
 
             <Form.Group controlId="password1">
-                <Form.Label>Password</Form.Label>
-                <Form.Control 
-                className={styles.Input} 
-                type="password" 
-                placeholder="Password" 
-                name="password1" 
+              <Form.Label>Password</Form.Label>
+              <Form.Control
+                className={styles.Input}
+                type="password"
+                placeholder="Password"
+                name="password1"
                 value={password1}
                 onChange={handleChange}
-                />
+              />
             </Form.Group>
-            {errors.password1?.map((message, idx) => 
-            <Alert variant="warning" key={idx}>{message}</Alert>
-            )}
+            {errors.password1?.map((message, idx) => (
+              <Alert variant="warning" key={idx}>
+                {message}
+              </Alert>
+            ))}
             <Form.Group controlId="password2">
-                <Form.Label>Confirm Password</Form.Label>
-                <Form.Control 
-                className={styles.Input} 
-                type="password" 
-                placeholder="Confirm Password" 
-                name="password2" 
+              <Form.Label>Confirm Password</Form.Label>
+              <Form.Control
+                className={styles.Input}
+                type="password"
+                placeholder="Confirm Password"
+                name="password2"
                 value={password2}
                 onChange={handleChange}
-                />
+              />
             </Form.Group>
-            {errors.password2?.map((message, idx) => 
-            <Alert variant="warning" key={idx}>{message}</Alert>
-            )}
-            <Button 
-            className={`${btnStyles.Button} ${btnStyles.Bright} ${btnStyles.Wide}`} 
-            type="submit">
-                Sign Up
+            {errors.password2?.map((message, idx) => (
+              <Alert variant="warning" key={idx}>
+                {message}
+              </Alert>
+            ))}
+            <Button
+              className={`${btnStyles.Button} ${btnStyles.Bright} ${btnStyles.Wide}`}
+              type="submit"
+            >
+              Sign Up
             </Button>
-            {errors.non_field_errors?.map((message, idx) => 
-            <Alert variant="warning" key={idx} className="mt-3">{message}</Alert>
-            )}
-            </Form>
-
+            {errors.non_field_errors?.map((message, idx) => (
+              <Alert variant="warning" key={idx} className="mt-3">
+                {message}
+              </Alert>
+            ))}
+          </Form>
         </Container>
         <Container className={`mt-3 ${appStyles.Content}`}>
           <Link className={styles.Link} to="/signin">
@@ -112,12 +128,7 @@ const SignUpForm = () => {
         md={6}
         className={`my-auto d-none d-md-block p-2 ${styles.SignUpCol}`}
       >
-        <Image
-          className={`${appStyles.FillerImage}`}
-          src={
-            ""
-          }
-        />
+        <Image className={`${appStyles.FillerImage}`} src={""} />
       </Col>
     </Row>
   );
