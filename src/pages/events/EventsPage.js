@@ -16,11 +16,13 @@ import NoResults from "../../assets/no-results.png";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import PopularProfiles from "../profiles/PopularProfiles";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
 function EventsPage({ message, filter = "" }) {
   const [events, setEvents] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
+  const currentUser = useCurrentUser();
 
   const [search, setSearch] = useState("");
 
@@ -43,7 +45,7 @@ function EventsPage({ message, filter = "" }) {
     return () => {
       clearTimeout(timer);
     }
-  }, [filter, search, pathname]);
+  }, [filter, search, pathname, currentUser]);
 
   return (
     <Row className="h-100">
