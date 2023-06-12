@@ -6,10 +6,10 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 
-
 import styles from "../../styles/EventCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
+import { Alert } from "react-bootstrap";
 
 import { Image } from "react-bootstrap";
 import {
@@ -127,6 +127,11 @@ function EventEditForm() {
             onChange={handleChange}
           />
         </Form.Group>
+        {errors?.title?.map((message, idx) => (
+          <Alert key={idx} variant="warning">
+            {message}
+          </Alert>
+        ))}
 
         <Form.Group>
           <Form.Label>Event Description</Form.Label>
@@ -139,6 +144,11 @@ function EventEditForm() {
             onChange={handleChange}
           />
         </Form.Group>
+        {errors?.description?.map((message, idx) => (
+                <Alert key={idx} variant="warning">
+                    {message}
+                </Alert>
+            ))}
 
         <Form.Group>
           <Form.Label>Location</Form.Label>
@@ -150,6 +160,11 @@ function EventEditForm() {
             onChange={handleChange}
           />
         </Form.Group>
+        {errors?.location?.map((message, idx) => (
+                <Alert key={idx} variant="warning">
+                    {message}
+                </Alert>
+            ))}
 
         <Form.Group>
           <Form.Label>Start Time</Form.Label>
@@ -161,6 +176,11 @@ function EventEditForm() {
             onChange={handleChange}
           />
         </Form.Group>
+        {errors?.start_time?.map((message, idx) => (
+                <Alert key={idx} variant="warning">
+                    {message}
+                </Alert>
+            ))}
 
         <Form.Group>
           <Form.Label>End Time</Form.Label>
@@ -172,6 +192,11 @@ function EventEditForm() {
             onChange={handleChange}
           />
         </Form.Group>
+        {errors?.end_time?.map((message, idx) => (
+                <Alert key={idx} variant="warning">
+                    {message}
+                </Alert>
+            ))}
       </Form>
 
       <Button
