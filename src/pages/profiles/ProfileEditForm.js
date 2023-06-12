@@ -38,7 +38,7 @@ const ProfileEditForm = () => {
     const handleMount = async () => {
       if (currentUser?.profile_id?.toString() === id) {
         try {
-          const { data } = await axiosReq.get(`/profiles/${id}/`);
+          const { data } = await axiosReq.get(`/profiles/${id}`);
           const { name, content, image } = data;
           setProfileData({ name, content, image });
         } catch (err) {
@@ -71,7 +71,7 @@ const ProfileEditForm = () => {
     }
 
     try {
-      const { data } = await axiosReq.put(`/profiles/${id}/`, formData);
+      const { data } = await axiosReq.put(`/profiles/${id}`, formData);
       setCurrentUser((currentUser) => ({
         ...currentUser,
         profile_image: data.image,
@@ -86,7 +86,7 @@ const ProfileEditForm = () => {
   const textFields = (
     <>
       <Form.Group>
-        <Form.Label>Bio</Form.Label>
+        <Form.Label>Tell People About Yourself:</Form.Label>
         <Form.Control
           as="textarea"
           value={content}
@@ -105,10 +105,10 @@ const ProfileEditForm = () => {
         className={`${btnStyles.Button} ${btnStyles.Blue}`}
         onClick={() => history.goBack()}
       >
-        cancel
+        Cancel
       </Button>
       <Button className={`${btnStyles.Button} ${btnStyles.Blue}`} type="submit">
-        save
+        Save
       </Button>
     </>
   );
@@ -134,7 +134,7 @@ const ProfileEditForm = () => {
                   className={`${btnStyles.Button} ${btnStyles.Blue} btn my-auto`}
                   htmlFor="image-upload"
                 >
-                  Change the image
+                  Change Your Profile Image
                 </Form.Label>
               </div>
               <Form.File
