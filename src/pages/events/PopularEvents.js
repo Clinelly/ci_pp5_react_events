@@ -4,6 +4,7 @@ import { Container } from "react-bootstrap";
 import { axiosReq } from "../../api/axiosDefaults";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import Asset from "../../components/Asset";
+import PopularEvent from "./PopularEvent";
 
 const PopularEvents = ({ mobile }) => {
   const [popularEventsData, setPopularEventsData] = useState({
@@ -42,12 +43,12 @@ const PopularEvents = ({ mobile }) => {
           {mobile ? (
             <div className="d-flex justify-content-around">
               {popularEvents.results.slice(0, 4).map((event) => (
-                <p key={event.id}>{event.title}</p>
+                <PopularEvent key={event.id} event={event} mobile/>
               ))}
             </div>
           ) : (
             popularEvents.results.map((event) => (
-              <p key={event.id}>{event.title}</p>
+              <PopularEvent key={event.id} event={event} />
             ))
           )}
         </>
