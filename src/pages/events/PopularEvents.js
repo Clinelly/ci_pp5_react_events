@@ -5,7 +5,7 @@ import { axiosReq } from "../../api/axiosDefaults";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import Asset from "../../components/Asset";
 
-const PopularEvents = () => {
+const PopularEvents = ({ mobile }) => {
   const [popularEventsData, setPopularEventsData] = useState({
     pageEvent: { results: [] },
     popularEvents: { results: [] },
@@ -31,13 +31,25 @@ const PopularEvents = () => {
   }, [currentUser]);
 
   return (
-    <Container className={appStyles.Content}>
+    <Container
+      className={`${appStyles.Content} ${
+        mobile && "d-lg-none text-center mb-3"
+      }`}
+    >
       {popularEvents.results.length ? (
         <>
           <p>Most Popular Events</p>
-          {popularEvents.results.map((event) => (
-            <p key={event.id}>{event.title}</p>
-          ))}
+          {mobile ? (
+            <div className="d-flex justify-content-around">
+              {popularEvents.results.slice(0, 4).map((event) => (
+                <p key={event.id}>{event.title}</p>
+              ))}
+            </div>
+          ) : (
+            popularEvents.results.map((event) => (
+              <p key={event.id}>{event.title}</p>
+            ))
+          )}
         </>
       ) : (
         <Asset spinner />

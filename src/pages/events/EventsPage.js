@@ -52,6 +52,7 @@ function EventsPage({ message, filter = "" }) {
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
         <PopularProfiles mobile />
+        <PopularEvents mobile />
         <i className={`fa-brands fa-searchengin ${styles.SearchIcon}`} />
         <Form className={styles.SearchBar} onSubmit={(e) => e.preventDefault()}>
           <Form.Control
