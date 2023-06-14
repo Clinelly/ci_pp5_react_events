@@ -15,6 +15,13 @@
   border: 1px solid #dadadf;
 }
 
+.Footer {
+  margin-top: 20px;
+  background-color: #ffffff;
+  padding: 10px;
+  width: auto;
+}
+
 .FillerImage {
   object-fit: cover;
   height: 100%;
