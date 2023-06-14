@@ -55,6 +55,14 @@ function EventCreateForm() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    const selectedStartDate = new Date(start_time);
+    const selectedEndDate = new Date(end_time);
+    const currentDate = new Date();
+    
+    if (selectedStartDate < currentDate || selectedEndDate < currentDate) {
+      setErrors("Please select a future date.");
+      return;
+    }
     const formData = new FormData();
 
     formData.append("title", title);
@@ -93,10 +101,10 @@ function EventCreateForm() {
           />
         </Form.Group>
         {errors?.title?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-          {message}
-        </Alert>
-      ))}
+          <Alert variant="warning" key={idx}>
+            {message}
+          </Alert>
+        ))}
 
         <Form.Group>
           <Form.Label>Event Description</Form.Label>
@@ -110,10 +118,10 @@ function EventCreateForm() {
           />
         </Form.Group>
         {errors?.description?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-          {message}
-        </Alert>
-      ))}
+          <Alert variant="warning" key={idx}>
+            {message}
+          </Alert>
+        ))}
 
         <Form.Group>
           <Form.Label>Location</Form.Label>
@@ -126,11 +134,10 @@ function EventCreateForm() {
           />
         </Form.Group>
         {errors?.location?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-          {message}
-        </Alert>
-      ))}
-
+          <Alert variant="warning" key={idx}>
+            {message}
+          </Alert>
+        ))}
         <Form.Group>
           <Form.Label>Start Time</Form.Label>
           <Form.Control
@@ -142,10 +149,10 @@ function EventCreateForm() {
           />
         </Form.Group>
         {errors?.start_time?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-          {message}
-        </Alert>
-      ))}
+          <Alert variant="warning" key={idx}>
+            {message}
+          </Alert>
+        ))}
 
         <Form.Group>
           <Form.Label>End Time</Form.Label>
@@ -158,10 +165,10 @@ function EventCreateForm() {
           />
         </Form.Group>
         {errors?.end_time?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-          {message}
-        </Alert>
-      ))}
+          <Alert variant="warning" key={idx}>
+            {message}
+          </Alert>
+        ))}
       </Form>
 
       <Button
