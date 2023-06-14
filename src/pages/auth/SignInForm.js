@@ -17,6 +17,7 @@ import appStyles from "../../App.module.css";
 import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
 import { useRedirectUser } from "../../hooks/useRedirectUser";
 import { setTokenTimestamp } from "../../utils/utils";
+import signInImg from "../../assets/signin_form.jpg"
 
 function SignInForm() {
   const setCurrentUser = useSetCurrentUser();
@@ -114,7 +115,7 @@ function SignInForm() {
       >
         <Image
           className={`${appStyles.FillerImage}`}
-          src={""}
+          src={signInImg}
         />
       </Col>
     </Row>
