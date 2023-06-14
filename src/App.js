@@ -15,6 +15,7 @@ import UsernameForm from "./pages/profiles/UsernameForm";
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 import NotFound from "./components/NotFound";
+import HomePage from "./pages/home/HomePage";
 
 function App() {
   const currentUser = useCurrentUser();
@@ -24,13 +25,19 @@ function App() {
       <NavBar />
       <Container className={styles.Main}>
         <Switch>
-          <Route
+          {currentUser?(          <Route
             exact
             path="/"
             render={() => (
               <EventsPage message="No results found. Try a different keyword." />
             )}
-          />
+          />):(          <Route
+            exact
+            path="/"
+            render={() => (
+              <HomePage />
+            )}
+          />)}
           <Route
             exact
             path="/feed"
