@@ -3,7 +3,7 @@ import { Carousel } from "react-bootstrap";
 import CarouselImg1 from "../assets/carousel_1.jpg";
 import CarouselImg2 from "../assets/carousel_2.jpg";
 import CarouselImg3 from "../assets/carousel_3.jpg";
-import styles from "../App.module.css"
+import styles from "../styles/HomePage.module.css"
 
 const HomeCarousel = () => {
   return (

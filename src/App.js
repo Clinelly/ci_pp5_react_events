@@ -25,19 +25,17 @@ function App() {
       <NavBar />
       <Container className={styles.Main}>
         <Switch>
-          {currentUser?(          <Route
-            exact
-            path="/"
-            render={() => (
-              <EventsPage message="No results found. Try a different keyword." />
-            )}
-          />):(          <Route
-            exact
-            path="/"
-            render={() => (
-              <HomePage />
-            )}
-          />)}
+          {currentUser ? (
+            <Route
+              exact
+              path="/"
+              render={() => (
+                <EventsPage message="No results found. Try a different keyword." />
+              )}
+            />
+          ) : (
+            <Route exact path="/" render={() => <HomePage />} />
+          )}
           <Route
             exact
             path="/feed"
@@ -97,7 +95,7 @@ function App() {
             path="/profiles/:id/edit"
             render={() => <ProfileEditForm />}
           />
-          <Route render={() =><NotFound />} />
+          <Route render={() => <NotFound />} />
         </Switch>
       </Container>
     </div>
