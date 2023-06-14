@@ -39,7 +39,7 @@ function EventEditForm() {
   useEffect(() => {
     const handleMount = async () => {
       try {
-        const { data } = await axiosReq.get(`/events/${id}`);
+        const { data } = await axiosReq.get(`/events/${id}/`);
         const {
           title,
           description,
@@ -104,7 +104,7 @@ function EventEditForm() {
     formData.append("end_time", formattedEndTime);
 
     try {
-      await axiosReq.put(`/events/${id}`, formData);
+      await axiosReq.put(`/events/${id}/`, formData);
       history.push(`/events/${id}`);
     } catch (err) {
       console.log(err);

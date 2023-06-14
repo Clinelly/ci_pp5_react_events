@@ -10,6 +10,7 @@ import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 
 import PopularProfiles from "./PopularProfiles";
+import PopularEvents from "../events/PopularEvents";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
@@ -39,7 +40,7 @@ function ProfilePage() {
       try {
         const [{ data: pageProfile }, { data: profileEvents }] =
           await Promise.all([
-            axiosReq.get(`/profiles/${id}`),
+            axiosReq.get(`/profiles/${id}/`),
             axiosReq.get(`/events/?owner__profile=${id}`),
           ]);
         setProfileData((prevState) => ({
@@ -139,6 +140,7 @@ function ProfilePage() {
     <Row>
       <Col className="py-2 p-0 p-lg-2" lg={8}>
         <PopularProfiles mobile />
+        <PopularEvents mobile />
         <Container className={appStyles.Content}>
           {hasLoaded ? (
             <>
@@ -152,6 +154,7 @@ function ProfilePage() {
       </Col>
       <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
         <PopularProfiles />
+        <PopularEvents />
       </Col>
     </Row>
   );
