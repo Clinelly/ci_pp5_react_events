@@ -22,6 +22,10 @@
   width: auto;
 }
 
+.CarouselLabel {
+  background-color: rgba(145, 145, 145, 0.6);
+}
+
 .FillerImage {
   object-fit: cover;
   height: 100%;

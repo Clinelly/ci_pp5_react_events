@@ -3,6 +3,7 @@ import { Carousel } from "react-bootstrap";
 import CarouselImg1 from "../assets/carousel_1.jpg";
 import CarouselImg2 from "../assets/carousel_2.jpg";
 import CarouselImg3 from "../assets/carousel_3.jpg";
+import styles from "../App.module.css"
 
 const HomeCarousel = () => {
   return (
@@ -10,9 +11,9 @@ const HomeCarousel = () => {
       <Carousel>
         <Carousel.Item interval={3000}>
           <img className="d-block w-100" src={CarouselImg1} alt="First slide" />
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <Carousel.Caption className={styles.CarouselLabel}>
+            <h3>Start an Epic Adventure</h3>
+            <p>Meet people from around the world and organise the trip of a lifetime!</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item interval={3000}>
@@ -21,17 +22,17 @@ const HomeCarousel = () => {
             src={CarouselImg2}
             alt="Second slide"
           />
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <Carousel.Caption className={styles.CarouselLabel}>
+            <h3>Build a New Club</h3>
+            <p>Connect with like minded individuals and build a team for success!</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item interval={3000}>
           <img className="d-block w-100" src={CarouselImg3} alt="Third slide" />
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
+          <Carousel.Caption className={styles.CarouselLabel}>
+            <h3>Host Casual Meets</h3>
             <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+              New to an area? Put yourself out there and expand your social network!
             </p>
           </Carousel.Caption>
         </Carousel.Item>
