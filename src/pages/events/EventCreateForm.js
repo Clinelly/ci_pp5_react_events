@@ -58,7 +58,7 @@ function EventCreateForm() {
     const selectedStartDate = new Date(start_time);
     const selectedEndDate = new Date(end_time);
     const currentDate = new Date();
-    
+
     if (selectedStartDate < currentDate || selectedEndDate < currentDate) {
       setErrors("Please select a future date.");
       return;
@@ -69,12 +69,8 @@ function EventCreateForm() {
     formData.append("description", description);
     formData.append("location", location);
     formData.append("image", imageInput.current.files[0]);
-    // Format start_time and end_time
-    const formattedStartTime = new Date(start_time).toISOString();
-    const formattedEndTime = new Date(end_time).toISOString();
-
-    formData.append("start_time", formattedStartTime);
-    formData.append("end_time", formattedEndTime);
+    formData.append("start_time", start_time);
+    formData.append("end_time", end_time);
 
     try {
       const { data } = await axiosReq.post("/events/", formData);
@@ -82,7 +78,11 @@ function EventCreateForm() {
     } catch (err) {
       console.log(err);
       if (err.response?.status !== 401) {
-        setErrors(err.response?.data);
+        if (err.response?.data?.start_time) {
+          setErrors(err.response.data.start_time);
+        } else {
+          setErrors(err.response?.data);
+        }
       }
     }
   };
@@ -173,7 +173,7 @@ function EventCreateForm() {
 
       <Button
         className={`${btnStyles.Button} ${btnStyles.Blue}`}
-        onClick={() => {}}
+        onClick={() => history.goBack()}
       >
         Cancel
       </Button>
@@ -223,6 +223,11 @@ function EventCreateForm() {
                 ref={imageInput}
               />
             </Form.Group>
+            {errors?.image?.map((message, idx) => (
+              <Alert variant="warning" key={idx}>
+                {message}
+              </Alert>
+            ))}
             <div className="d-md-none">{textFields}</div>
           </Container>
         </Col>
