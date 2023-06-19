@@ -55,33 +55,38 @@ Developer: Stuart Wall
 
 ## About
 
-Event Horizon is an event hosting website.
+Event Horizon is an event hosting website. The overall concept is that users can sign up to Event Horizon and create and post events that other users can read about and attend. 
 
 
 ## Project Goals
 
+The overarching project goals are to create a social media website. Users will be allowed to sign up and then log in. Once logged in, the users can edit their profile and change their username, password, profile picture and personal information. Users can also create events for other users to comment on, like or show their attendence. All posted content will have full CRUD functionality.
 
-
-
-The key functionality aspects:
-
-- The site to be simple and use intuitive navigation across all pages
-- User authentication
-- User interaction 
-- User's to have their own profiles with brief description, profile image and 
-- CRUD functionality 
-- Tasks filtering by keyword search, 
-- Responsiveness to allow pleasant usage of the app across a range of devices with varying display sizes
 
 
 ## User Experience
 
 ### Target Audience
 
+The target users for Event Horizon are:
+- users promoting businesses/organisations that are hosting events.
+- users who wish to expand their social network and host social events in the local area.
+- users who may wish to organise a specific group activity.
+- users who wish to meet up with like-minded individuals.
+- users who are new to an area and are looking to join local groups.
 
 
 ### User Requirements and Expectations
 
+The User Requirements and Expectations of the webssite are:
+- it is simple to use and intuitive to navigate.
+- it is responsive across a range of devices.
+- it has user authentication.
+- it allows users to have their own profile page.
+- it has search and filter functionality.
+- it allows users to create content.
+- it allows users to interact with posted content in a variety of ways.
+- it has full CRUD functionality.
 
 
 
