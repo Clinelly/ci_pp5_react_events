@@ -146,10 +146,7 @@ The User Requirements and Expectations of the webssite are:
 
 ### Agile Design
 
-An Agile approach to creating this app has been applied. GitHub's projects was used to track user stories and implement ideas based on their level of importance for allowing use of the app with no loss of functionality or user experience. Three categories were created indicating their level of importance, those were:
-- MUST HAVE
-- SHOULD HAVE
-- COULD HAVE
+An Agile approach to creating this app has been applied. GitHub's projects was used to track user stories and implement ideas based on their level of importance for allowing use of the app with no loss of functionality or user experience. 
 
 By using AGILE methodology in this project I was able to deliver a site which had all required functionality and some more. Due to the time limit on this project I was not able to incorporate all initial listed features, but this is where an AGILE approach is great for app design. The project displays this by having User stories in the Done section and the ones which were decided to be left for future, put in the future implementations section of the readme.
 
@@ -159,10 +156,10 @@ The GitHub project can be found [here]()
 
 Event Horizon handles data with full CRUD Functionality:
 <br>
-- Create -  Users can create, an account, profile, tasks, comments, packs, contact messages and watch objects.
-- Read - Users can view the tasks, comments, packs of other users and also the profiles of these users.
-- Update - Users can update their profile, password, posted tasks, packs and watch status of tasks via the interactive forms and buttons on the site.
-- Delete - Users can delete tasks, comments, packs and watch objects via the interactive buttons on the site.
+- Create -  Users can create an account, profile, events, comments. Users can like and attend an event and follow other users.
+- Read - Users can view the events, comments, other user profiles. Users can see their likes and attending status on events and if they have followed other users.
+- Update - Users can update their profile, password, hosted events, comments.
+- Delete - Users can delete events and comments. They can remove likes, their attending status and unfollow users.
 
 ### Colours
 
@@ -184,9 +181,15 @@ Balsamiq was used to create wireframes of the sites pages
 
 <details>
 <summary>Wireframes</summary>
-<img src="">
+<img src="docs/wireframes/home_nsi.png">
+<img src="docs/wireframes/sign_up_form.png">
+<img src="docs/wireframes/sign_in_form.png">
+<img src="docs/wireframes/home_si.png">
+<img src="docs/wireframes/event_page.png">
+<img src="docs/wireframes/profile.png">
+<img src="docs/wireframes/create_event.png">
 
-
+NB - The Event Feed / Liked Feed and Attending Feed all have the same layout as the Home page that displays when a user is logged in. The Edit Event form has the same layout as the Event Creation form.
 </details>
 
 ##### Back to [top](#tick-it)
