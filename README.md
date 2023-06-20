@@ -288,13 +288,216 @@ The API for this Front-End application was built with the Django REST Framework.
 
 In its entirety the website consists of a variety of features across the many site pages as listed below.
 
-### Authentication
+### Home Page
 
-Authentication is a feature of the Tick It site, users will have to be authenticated whilst attempting to log in or else they will not be able to use any functionality of the site or view any information that users have posted.
+The layout of the Home Page changes whether a user is logged in or not. 
 
 <details>
-<summary>Authentication image</summary>
-<img src="">
+<summary>Logo</summary>
+Event Horizon's logo. Clicking on the logo returns the user to the home page.
+<img src="docs/features/logo.png">
+</details>
+
+<details>
+<summary>NavBar</summary>
+If the user is not signed in, the navbar provides links to the home page as well as sign in and sign up forms.
+<img src="docs/features/navbar_nsi.png">
+</details>
+
+<details>
+<summary>Carousel</summary>
+If the user is not signed in, a photo carousel shows a few images and the text snippets of  the site's goals.
+<img src="docs/features/photo_carousel.png">
+</details>
+
+<details>
+<summary>Footer</summary>
+If the user is not signed in, a footer promotes the developer with links to LinkedIn and GitHub.
+<img src="docs/features/footer.png">
+</details>
+
+<details>
+<summary>NavBar</summary>
+If the user is signed in then the NavBar shows links to the various feeds of interest to the user, as well as a link to event creation and their profile.
+<img src="docs/features/navbar_si.png">
+</details>
+
+<details>
+<summary>Search Bar</summary>
+If the user is signed in then the Search Bar shows, allowing users to search for events and users.
+<img src="docs/features/search_bar.png">
+</details>
+
+<details>
+<summary>Event Summary</summary>
+If the user is signed in then the Home Page shows an unfiltered list of events that have been posted to the site.
+<img src="docs/features/event_summary.png">
+</details>
+
+<details>
+<summary>Popular Profiles</summary>
+If the user is signed in then the Home Page shows a list of the 10 most followed profiles. Next to each profile is a button that allows the user to follow that specific profile. This list is repeated throughout the site on various feed pages.
+<img src="docs/features/popular_profiles.png">
+</details>
+
+<details>
+<summary>Popular Profiles</summary>
+If the user is signed in then the Home Page shows a list of the most attended events. This list is repeated throughout the site on various feed pages.
+<img src="docs/features/popular_events.png">
+</details>
+
+### Followed Feed
+
+With a similar layout to the Home Page, this page shows a filtered list of events, posted by users that the current user has followed.
+
+<details>
+<summary>Followed Feed</summary>
+In this example, there are no events shown as the user has not followed any profiles.
+<img src="docs/features/followed_feed.png">
+</details>
+
+### Liked Feed
+
+With a similar layout to the Home Page, this page shows a filtered list of events that have been liked by the user.
+
+<details>
+<summary>Liked Feed</summary>
+In this example, there are no events shown as the user has not liked any events.
+<img src="docs/features/liked_feed.png">
+</details>
+
+### Attending Feed
+
+With a similar layout to the Home Page, this page shows a filtered list of events that the user has marked that they will be attending.
+
+<details>
+<summary>Attending Feed</summary>
+In this example, there are no events shown as the user has not signed up to attend any events.
+<img src="docs/features/attending_feed.png">
+</details>
+
+### Profile Page
+
+The Profile Page shows a user's stats and posted events. If the signed in user views their own profile page, then they can edit their profile information.
+
+<details>
+<summary>Profile Stats</summary>
+This section of the Profile Page shows the user's key stats.
+<img src="docs/features/profile_stats.png">
+</details>
+
+<details>
+<summary>Profile Event Summary</summary>
+This section of the Profile Page shows the user's posted events.
+<img src="docs/features/event_preview_profile.png">
+</details>
+
+<details>
+<summary>Profile Edit Menu</summary>
+If the user is viewing their own profile, this menu will provide them with options to edit their profile.
+<img src="docs/features/profile_edit_menu.png">
+</details>
+
+<details>
+<summary>Edit Profile Image</summary>
+This allows the user to upload a new image to display as their avatar.
+<img src="docs/features/edit_profile_image.png">
+</details>
+
+<details>
+<summary>Edit Profile Bio</summary>
+This allows the user to add information to their profile.
+<img src="docs/features/edit_profile_bio.png">
+</details>
+
+<details>
+<summary>Edit Profile UserName</summary>
+This allows the user to change their username.
+<img src="docs/features/edit_profile_username.png">
+</details>
+
+<details>
+<summary>Edit Profile Password</summary>
+This allows the user to change their password.
+<img src="docs/features/edit_profile_password.png">
+</details>
+
+### Event Page
+
+This is the page a user is taken to when they click on an event to show it in more detail.
+
+<details>
+<summary>Event Detail</summary>
+This card shows the more detailed event information - Title, image, location, description, start and end times as well as number of comments, likes and attendees.
+<img src="docs/features/event_detail.png">
+</details>
+
+<details>
+<summary>Comment Box</summary>
+This form allows the user to post a comment on the current event.
+<img src="docs/features/comment_box.png">
+</details>
+
+<details>
+<summary>Comment Feed</summary>
+This displays a list of all the comments on this particular event.
+<img src="docs/features/comment_feed.png">
+</details>
+
+<details>
+<summary>Comment Feed</summary>
+This displays a list of all the comments on this particular event.
+<img src="docs/features/comment_feed.png">
+</details>
+
+<details>
+<summary>Event Edit Menu</summary>
+This dropdown menu provides the event ower with options to edit their event or delete it.
+<img src="docs/features/event_edit_menu.png">
+</details>
+
+<details>
+<summary>Comment Edit Menu</summary>
+This dropdown menu provides the event ower with options to edit their comment or delete it.
+<img src="docs/features/comment_edit_menu.png">
+</details>
+
+<details>
+<summary>Event Edit Form</summary>
+Similar to the Event Creation Form, this form allows the owner of an event to change all their information.
+<img src="docs/features/event_edit_form.png">
+</details>
+
+<details>
+<summary>Comment Edit Form</summary>
+Similar to the Comment Creation Form, this form allows the owner of a comment to change all their information.
+<img src="docs/features/comment_edit_form.png">
+</details>
+
+### Event Creation
+
+This page is a single form which allows users to create an event with the following information: Title, image, location, description, start and end times as well as number of comments, likes and attendees.
+
+<details>
+<summary>Event Create Form</summary>
+A single form which allows users to create an event with the following information: Title, image, location, description, start and end times as well as number of comments, likes and attendees.
+<img src="docs/features/event_create_form.png">
+</details>
+
+### Authentication
+
+Authentication is a feature of the Event Horizon website. Users will have to be authenticated whilst attempting to log in or else they will not be able to use any functionality of the site or view any information that users have posted.
+
+<details>
+<summary>Sign Up Page</summary>
+A Form where users can select a username and password to create an account and access the site.
+<img src="docs/features/sign_up_form.png">
+</details>
+
+<details>
+<summary>Sign In Page</summary>
+A Form where signed up users can log in to the site.
+<img src="docs/features/sign_in_form.png">
 </details>
 
 
