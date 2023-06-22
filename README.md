@@ -134,12 +134,8 @@ The User Requirements and Expectations of the webssite are:
 31. As a logged in user I can edit my profile so that I can change my profile picture and bio.
 32. As a logged in user I can update my username and password so that I can change my display name and keep my profile secure.
 
-### Site Owner Stories
 
- 
-
-
-##### Back to [top]()
+##### Back to [top](#event-horizon)
 
 
 ## Technical Design
@@ -192,7 +188,7 @@ Balsamiq was used to create wireframes of the sites pages
 NB - The Event Feed / Liked Feed and Attending Feed all have the same layout as the Home page that displays when a user is logged in. The Edit Event form has the same layout as the Event Creation form.
 </details>
 
-##### Back to [top](#tick-it)
+##### Back to [top](#event-horizon)
 
 
 ## Technologies Used
@@ -240,16 +236,14 @@ NB - The Event Feed / Liked Feed and Attending Feed all have the same layout as 
 | bootstrap | 4.6.0 |
 | jwt-decode | 3.1.2 |
 | react-bootstrap | 1.6.3 |
-| react-chartjs-2 | 3.0.4 |
 | react-dom | 17.0.2 |
 | react-infinite-scroll-component |6.1.0 |
-| react-multi-select-component | 4.3.4|
 | react-router-dom | 5.3.0 |
 | react-scripts | 5.0.1 |
 | react-scroll | 1.8.9|
 
 
-##### Back to [top]()
+##### Back to [top](#event-horizon)
 
 
 ## Front-End
@@ -281,7 +275,7 @@ There were various components created and reused across this application.
 
 The API for this Front-End application was built with the Django REST Framework. The repository with a README file for the DRF Back-End can be found [here](https://github.com/Clinelly/ci_pp5_drf_api_events).
 
-##### Back to [top](#)
+##### Back to [top](#event-horizon)
 
 
 ## Features
@@ -501,15 +495,13 @@ A Form where signed up users can log in to the site.
 </details>
 
 
-
-
 ## Future features / improvements
 
 Although alot of effort was put into this project, due to time constraints there is still room for finer refactoring of code and additional functionality / features to implement to the site. 
 
 
 
-##### Back to [top]()
+##### Back to [top](#event-horizon)
 
 
 ## Validation 
@@ -523,8 +515,6 @@ The W3C Markup Validation Service was used to validate the HTML of the website. 
 </details>
 
 
-
-
 ### CSS Validation
 
 The W3C Jigsaw CSS Validation Service was used to validate the CSS of the website. All CSS modules pass the validation with no errors.
@@ -532,8 +522,6 @@ The W3C Jigsaw CSS Validation Service was used to validate the CSS of the websit
 <details><summary>App.module.css</summary> 
 <img src=""> 
 </details> 
-
-
 
 
 ### ESLint JavaScript JSX Validation 
@@ -554,28 +542,11 @@ All JavaScript files were validated using ESLint JavaScript validator. All files
 
 Lighthouse was used to test the performance, accessibility, best practice and SEO of the site. The validation was done for both desktop & mobile.  
 
-#### Desktop 
 <details><summary>Results</summary>
 
 <details><summary>Main page (not logged in)</summary> 
 <img src=""> 
 </details>
-
-
-
-
-
-#### Mobile 
-
-<details><summary>Results</summary>
-
-<details><summary>Main page (not logged in)</summary> 
-<img src=""> 
-</details>
-
-
-
-
 
 
 ### Wave Validation
@@ -588,9 +559,7 @@ The WAVE WebAIM web accessibility evaluation tool was used to test the websites 
 </details>
 
 
-
-
-##### Back to [top](#tick-it)
+##### Back to [top](#event-horizon)
 
 
 ## Testing
@@ -598,12 +567,17 @@ The WAVE WebAIM web accessibility evaluation tool was used to test the websites 
 ### Device Testing
 
 This site was tested on the following devices:
+- ACER Chromebook 314,
+- iPhone 11 Pro
+- Google Pixel 7 Pro
 
 
 ### Browser compatibility
 
 The website was tested on the following web browsers:
-- Google Chrome (Version 112.0.5615.121)
+- Google Chrome
+- Safari
+- Microsoft Edge
 
  
 ### Manual testing
@@ -614,13 +588,225 @@ The website was tested on the following web browsers:
 
 To avoid unnecessary repetition of images, only the feature being referred to will have screenshots. Information on how to navigate to the feature referred to will be described within its relevant table reference. 
 
+1. As a user I can view a navbar from every page so that I can navigate easily between pages.
 
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+| Navbar   | Located at top of each page. Click on icon to navigate.  | Navigate to new page, navbar still present. | Works as expected. |
+
+<details>
+<summary>Images</summary>
+<img src="docs/manual_testing/man_test_us_1_test_1.png">
+<img src="docs/manual_testing/man_test_us_1_test_2.png">
+<img src="docs/manual_testing/man_test_us_1_test_3.png">
+</details>
+
+
+2. As a user I can navigate through pages quickly so that I can view content seamlessly without page refresh.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+| Navbar   | Click on each icon to naviagte to a new page.  | User navigates to new page. Page does not refresh. Spinner or content loads. | Works as expected. |
+
+<details>
+<summary>Images</summary>
+<img src="docs/manual_testing/man_test_us_2_test_1.png">
+<img src="docs/manual_testing/man_test_us_2_test_2.png">
+<img src="docs/manual_testing/man_test_us_2_test_3.png">
+</details>
+
+3. As a user I can create a new account so that I can access all the features for signed up users.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+| NavBar  |  Click on 'Sign Up' |  User is taken to sign up form. | Works as expected. |
+| Sign Up Form  |  User fills in details and clicks sign up. |  Account created, user is directed to sign in page. | Works as expected. |
+
+<details>
+<summary>Images</summary>
+<img src="docs/manual_testing/man_test_us_3_test_1.png">
+<img src="docs/manual_testing/man_test_us_3_test_2.png">
+<img src="docs/manual_testing/man_test_us_3_test_3.png">
+</details>
+
+4. As a user I can sign in to the app so that I can access functionality for logged in users.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
 |    |   |   | |
 
-##### Back to [top]()
+5. As a user I can tell if I am logged in or not so that I can log in if I need to.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   | |
+
+6. As a user I can maintain my logged-in status until I choose to log out so that my user experience is not compromised.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   | |
+
+7. As a logged out user I can see sign in and sign up options so that I can sign in/sign up.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   | |
+
+8. As a user I can view user's avatars so that I can easily identify users of the application.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   | |
+
+9. As a logged in user I can create events so that I can share and expand my social network.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   | |
+
+10. As a user I can view the details of an event so that I can learn more about it.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   | |
+
+11. As a logged in user I can like an event so that I can show my support for the creators that interest me.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   | |
+
+12. As a logged in user I can show that I am attending an event so that I can show my support and the event host can make appropriate preparations.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   | |
+
+
+13. As a user I can view all the most recent events, ordered by most recently created first so that I am up to date with the newest content.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   | |
+
+14. As a user, I can search for events with keywords, so that I can find the events and user profiles I am most interested in.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   | |
+
+15. As a logged in user I can view the events I liked so that I can find the events I enjoy the most.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   | |
+
+16. As a logged in user I can view the events I am attending (or have attended) to see if there are any updates.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   | |
+
+17. As a logged in user I can view content filtered by users I follow so that I can keep up to date with new events.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   | |
+
+18. As a user I can keep scrolling through the images on the site that are loaded for me automatically so that I don't have to navigate excessively throughout the site.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   | |
+
+
+19. As a user I can view the event page so that I can read the comments about the event.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   | |
+
+20. As an event creator I can edit my event details so that I can make corrections or updates to my event after it was created.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   | |
+
+21. As a logged in user I can add comments to an event so that I can share my thoughts.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   | |
+
+22. As a user I can see how long ago a comment was made so that I know how old a comment is.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   | |
+
+23. As a user I can read comments on events so that I can read what other users think and see any updates.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   | |
+
+24. As an owner of a comment I can delete my comment so that I can control removal of my comment from the application.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   | |
+
+25. As an owner of a comment I can edit my comment so that I can fix or update my existing comment.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   | |
+
+26. As a user I can view other users' profiles so that I can see their content and learn more about them.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   | |
+
+27. As a user I can see a list of the most followed profiles so that I can see which creators are popular.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   | |
+
+28. As a user I can view statistics about a specific user: bio, number of events, number of events attended, followers and users followed so that I can learn more about them.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   | |
+
+29. As a logged in user I can follow and unfollow other users so that I can see and remove events by specific users in my feed.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   | |
+
+30. As a user I can view all the content by a specific user so that I can catch up on their latest events, or decide I want to follow them.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   | |
+
+31. As a logged in user I can edit my profile so that I can change my profile picture and bio.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   | |
+
+32. As a logged in user I can update my username and password so that I can change my display name and keep my profile secure.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|    |   |   | |
+
+
+##### Back to [top](#event-horizon)
 
 
 ## Bugs
@@ -630,7 +816,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 
 
-##### Back to [top]()
+##### Back to [top](#event-horizon)
 
 
 ## Deployment
@@ -739,7 +925,7 @@ You can make a local clone of a repository via the following steps:
 8. `$ clone `
 9. Now press enter and the local clone will be created at the desired local location
 
-##### Back to [top](#tick-it)
+##### Back to [top](#event-horizon)
 
 
 ## Credits
@@ -765,9 +951,9 @@ You can make a local clone of a repository via the following steps:
 ## Acknowledgements
 
 I would like to also thank the following:
-- My wife and family for their support and feedback whilst doing this project
+- My wife and family for their support and feedback whilst doing this project.
 - Code Institute tutor support who helped with the many issues I had during this project.
 - My Code Institute mentor Mo Shami for his guidance through this project.
 
 
-[Back to Top]()
+[Back to Top](#event-horizon)
