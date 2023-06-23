@@ -715,13 +715,27 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   | |
+| Event Preview   | User views the preview on the events feed.  | Event preview displays the event information.  | Works as expected.|
+| Event Detail   | User clicks on an event preview to view the event page..  | Event page displays the event information.  | Works as expected.|
+
+<summary>Images</summary>
+<img src="docs/manual_testing/man_test_us_10_test_1.png">
+<img src="docs/manual_testing/man_test_us_10_test_2.png">
+</details>
 
 11. As a logged in user I can like an event so that I can show my support for the creators that interest me.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   | |
+| Event Preview   | User views the preview on the events feed and clicks the like button.  | Like button is filled in and the like counter increases.  | Works as expected.|
+| Event Detail   | User event page and clicks the like button.  | Like button is filled in and the like counter increases.  | Works as expected.|
+
+<summary>Images</summary>
+<img src="docs/manual_testing/man_test_us_11_test_1.png">
+<img src="docs/manual_testing/man_test_us_11_test_2.png">
+<img src="docs/manual_testing/man_test_us_11_test_3.png">
+<img src="docs/manual_testing/man_test_us_11_test_4.png">
+</details>
 
 12. As a logged in user I can show that I am attending an event so that I can show my support and the event host can make appropriate preparations.
 
