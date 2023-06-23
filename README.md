@@ -633,13 +633,31 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   | |
+|  Navbar    | Click on sign in tab. | User is directed to sign in page.  | Works as expected. |
+|  Sign In Form    | User fills in their log in details. | User is logged in and taken to home page. | Works as expected. |
+
+<details>
+<summary>Images</summary>
+<img src="docs/manual_testing/man_test_us_4_test_1.png">
+<img src="docs/manual_testing/man_test_us_4_test_2.png">
+<img src="docs/manual_testing/man_test_us_4_test_3.png">
+</details>
 
 5. As a user I can tell if I am logged in or not so that I can log in if I need to.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   | |
+|  Home Page  | Non-logged in user views the page.  | Photo carousel is displayed.  | Works as expected. |
+|  Navbar  | Non-logged in user views the page.  | Navbar displays sign in and sign out.  | Works as expected. |
+|  Home Page  | Logged in user views the page.  | Event feed is displayed.  | Works as expected. |
+|  Navbar  | Logged in user views the page.  | Navbar displays links to various feeds, profiles and event creation.  | Works as expected. |
+
+<details>
+<summary>Images</summary>
+<img src="docs/manual_testing/man_test_us_5_test_1.png">
+<img src="docs/manual_testing/man_test_us_5_test_2.png">
+</details>
+
 
 6. As a user I can maintain my logged-in status until I choose to log out so that my user experience is not compromised.
 
@@ -651,19 +669,47 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   | |
+|  NavBar  | Non-logged in user views the page.  | Navbar displays signin/signup  | Works as expected. |
+
+<details>
+<summary>Images</summary>
+<img src="docs/manual_testing/man_test_us_7_test_1.png">
+</details>
 
 8. As a user I can view user's avatars so that I can easily identify users of the application.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   | |
+| Popular Profiles   | User views the event feeds.  | Avatar is displayed next to user name.  | Works as expected. |
+| Event Preview  | User views the event feeds.  | Avatar is displayed next to creator username in the corner .  | Works as expected. |
+| Event Detail  | User clicks on an event to view more details.  | Avatar is displayed next to creator username in the corner .  | Works as expected. |
+| Comments  | User views the comments.  | Avatar is displayed next to commentor username .  | Works as expected. |
+| NavBar   | User views the navbar.  | Avatar is displayed next to current user's profile link.  | Works as expected. |
+| Profile Page   | User views their own or another profile.  | Avatar is displayed next to user's profile stats.  | Works as expected. |
 
-9. As a logged in user I can create events so that I can share and expand my social network.
+<details>
+<summary>Images</summary>
+<img src="docs/manual_testing/man_test_us_8_test_1.png">
+<img src="docs/manual_testing/man_test_us_8_test_2.png">
+<img src="docs/manual_testing/man_test_us_8_test_3.png">
+<img src="docs/manual_testing/man_test_us_8_test_4.png">
+<img src="docs/manual_testing/man_test_us_8_test_5.png">
+<img src="docs/manual_testing/man_test_us_8_test_6.png">
+</details>
+
+9. As a logged in user I can create events so that I can expand my social network.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   | |
+|  Navbar  |  User clicks 'Create event' | User is taken to the event creation form.  | Works as expected.|
+|  Event Creation Form  |  User fills in all the details and clicks 'create' | Event is created and posted to the website.  | Works as expected.|
+
+<details>
+<summary>Images</summary>
+<img src="docs/manual_testing/man_test_us_9_test_1.png">
+<img src="docs/manual_testing/man_test_us_9_test_2.png">
+<img src="docs/manual_testing/man_test_us_9_test_3.png">
+</details>
 
 10. As a user I can view the details of an event so that I can learn more about it.
 
