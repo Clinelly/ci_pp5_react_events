@@ -728,7 +728,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
 | Event Preview   | User views the preview on the events feed and clicks the like button.  | Like button is filled in and the like counter increases.  | Works as expected.|
-| Event Detail   | User event page and clicks the like button.  | Like button is filled in and the like counter increases.  | Works as expected.|
+| Event Detail   | User views the event page and clicks the like button.  | Like button is filled in and the like counter increases.  | Works as expected.|
 
 <summary>Images</summary>
 <img src="docs/manual_testing/man_test_us_11_test_1.png">
@@ -741,26 +741,53 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   | |
+| Event Preview   | User views the preview on the events feed and clicks the 'attending' button.  | Attending button is filled in and the counter increases.  | Works as expected.|
+| Event Detail   | User views the event page and clicks the attending button.  | Attending button is filled in and the counter increases.  | Works as expected.|
+
+<summary>Images</summary>
+<img src="docs/manual_testing/man_test_us_12_test_1.png">
+<img src="docs/manual_testing/man_test_us_12_test_2.png">
+<img src="docs/manual_testing/man_test_us_12_test_3.png">
+<img src="docs/manual_testing/man_test_us_12_test_4.png">
+</details>
 
 
 13. As a user I can view all the most recent events, ordered by most recently created first so that I am up to date with the newest content.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   | |
+| Home Page   | Logged in user views the home page.  | Home page displays all events, listed by most recently created.  | Works as expected. |
+
+<summary>Images</summary>
+<img src="docs/manual_testing/man_test_us_13_test_1.png">
+</details>
+
 
 14. As a user, I can search for events with keywords, so that I can find the events and user profiles I am most interested in.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   | |
+| Event Feed | Navigate to any feed and view the search bar.  | Search Bar is available  | Works as expected. |
+| Search Bar | User types in search parameters.  | Events are filters by keywords.  | Works as expected. |
+
+<summary>Images</summary>
+<img src="docs/manual_testing/man_test_us_14_test_1.png">
+<img src="docs/manual_testing/man_test_us_14_test_2.png">
+<img src="docs/manual_testing/man_test_us_14_test_3.png">
+<img src="docs/manual_testing/man_test_us_14_test_4.png">
+<img src="docs/manual_testing/man_test_us_14_test_5.png">
+</details>
+
 
 15. As a logged in user I can view the events I liked so that I can find the events I enjoy the most.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   | |
+| Liked Feed  | Logged in user clicks on the 'Liked' feed in the NavBar  | Liked Feed shows, showing events the user has liked.  | Works as expected. |
+
+<summary>Images</summary>
+<img src="docs/manual_testing/man_test_us_15_test_1.png">
+</details>
 
 16. As a logged in user I can view the events I am attending (or have attended) to see if there are any updates.
 
