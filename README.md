@@ -784,35 +784,59 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
 | Liked Feed  | Logged in user clicks on the 'Liked' feed in the NavBar  | Liked Feed shows, showing events the user has liked.  | Works as expected. |
+| Event Detail | Logged in user clicks on the events shown in the liked feed.  | User is taken to the detailed event page.  | Works as expected. |
 
 <summary>Images</summary>
 <img src="docs/manual_testing/man_test_us_15_test_1.png">
+<img src="docs/manual_testing/man_test_us_15_test_2.png">
 </details>
 
 16. As a logged in user I can view the events I am attending (or have attended) to see if there are any updates.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   | |
+| Attending Feed  | Logged in user clicks on the 'Attending' feed in the NavBar  | Attending Feed shows, showing events the user has marked as 'attending'.  | Works as expected. |
+| Event Detail | Logged in user clicks on the events shown in the attending feed.  | User is taken to the detailed event page.  | Works as expected. |
+
+<summary>Images</summary>
+<img src="docs/manual_testing/man_test_us_16_test_1.png">
+<img src="docs/manual_testing/man_test_us_16_test_2.png">
+</details>
+
 
 17. As a logged in user I can view content filtered by users I follow so that I can keep up to date with new events.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   | |
+| Event Feed  | Logged in user clicks on the 'Event' feed in the NavBar  | Event Feed shows, showing events tposted by other users the current user is 'following'.  | Works as expected. |
+| Event Detail | Logged in user clicks on the events shown in the Event feed.  | User is taken to the detailed event page.  | Works as expected. |
+
+<summary>Images</summary>
+<img src="docs/manual_testing/man_test_us_17_test_1.png">
+<img src="docs/manual_testing/man_test_us_17_test_2.png">
+</details>
 
 18. As a user I can keep scrolling through the images on the site that are loaded for me automatically so that I don't have to navigate excessively throughout the site.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   | |
+| All Feeds  |  User scrolls down list of events. | Infinite Scroll component automatically loads new posts and allow the user to scroll through more content.  | Works as expected.|
+| Comments Feed  |  User scrolls down list of comments. | Infinite Scroll component automatically loads new comments and allow the user to scroll through more content.  | Works as expected.|
 
 
 19. As a user I can view the event page so that I can read the comments about the event.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   | |
+| Event Preview   | User clicks on a desired feed. | User can view the event preview.  | Works as expected. |
+| Event Detail   | User clicks on an event they are interested in. | User is taken to the detailed event page.  | Works as expected. |
+| Comments   | User scrolls down to comment section. | User can view the comments. | Works as expected. |
+
+<summary>Images</summary>
+<img src="docs/manual_testing/man_test_us_20_test_1.png">
+<img src="docs/manual_testing/man_test_us_20_test_2.png">
+<img src="docs/manual_testing/man_test_us_20_test_3.png">
+</details>
 
 20. As an event creator I can edit my event details so that I can make corrections or updates to my event after it was created.
 
