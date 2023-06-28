@@ -718,6 +718,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 | Event Preview   | User views the preview on the events feed.  | Event preview displays the event information.  | Works as expected.|
 | Event Detail   | User clicks on an event preview to view the event page..  | Event page displays the event information.  | Works as expected.|
 
+<details>
 <summary>Images</summary>
 <img src="docs/manual_testing/man_test_us_10_test_1.png">
 <img src="docs/manual_testing/man_test_us_10_test_2.png">
@@ -730,6 +731,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 | Event Preview   | User views the preview on the events feed and clicks the like button.  | Like button is filled in and the like counter increases.  | Works as expected.|
 | Event Detail   | User views the event page and clicks the like button.  | Like button is filled in and the like counter increases.  | Works as expected.|
 
+<details>
 <summary>Images</summary>
 <img src="docs/manual_testing/man_test_us_11_test_1.png">
 <img src="docs/manual_testing/man_test_us_11_test_2.png">
@@ -744,6 +746,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 | Event Preview   | User views the preview on the events feed and clicks the 'attending' button.  | Attending button is filled in and the counter increases.  | Works as expected.|
 | Event Detail   | User views the event page and clicks the attending button.  | Attending button is filled in and the counter increases.  | Works as expected.|
 
+<details>
 <summary>Images</summary>
 <img src="docs/manual_testing/man_test_us_12_test_1.png">
 <img src="docs/manual_testing/man_test_us_12_test_2.png">
@@ -758,6 +761,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 | ------------- | ------------- | -------------    | ------------- |
 | Home Page   | Logged in user views the home page.  | Home page displays all events, listed by most recently created.  | Works as expected. |
 
+<details>
 <summary>Images</summary>
 <img src="docs/manual_testing/man_test_us_13_test_1.png">
 </details>
@@ -770,6 +774,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 | Event Feed | Navigate to any feed and view the search bar.  | Search Bar is available  | Works as expected. |
 | Search Bar | User types in search parameters.  | Events are filters by keywords.  | Works as expected. |
 
+<details>
 <summary>Images</summary>
 <img src="docs/manual_testing/man_test_us_14_test_1.png">
 <img src="docs/manual_testing/man_test_us_14_test_2.png">
@@ -786,6 +791,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 | Liked Feed  | Logged in user clicks on the 'Liked' feed in the NavBar  | Liked Feed shows, showing events the user has liked.  | Works as expected. |
 | Event Detail | Logged in user clicks on the events shown in the liked feed.  | User is taken to the detailed event page.  | Works as expected. |
 
+<details>
 <summary>Images</summary>
 <img src="docs/manual_testing/man_test_us_15_test_1.png">
 <img src="docs/manual_testing/man_test_us_15_test_2.png">
@@ -798,6 +804,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 | Attending Feed  | Logged in user clicks on the 'Attending' feed in the NavBar  | Attending Feed shows, showing events the user has marked as 'attending'.  | Works as expected. |
 | Event Detail | Logged in user clicks on the events shown in the attending feed.  | User is taken to the detailed event page.  | Works as expected. |
 
+<details>
 <summary>Images</summary>
 <img src="docs/manual_testing/man_test_us_16_test_1.png">
 <img src="docs/manual_testing/man_test_us_16_test_2.png">
@@ -811,6 +818,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 | Event Feed  | Logged in user clicks on the 'Event' feed in the NavBar  | Event Feed shows, showing events tposted by other users the current user is 'following'.  | Works as expected. |
 | Event Detail | Logged in user clicks on the events shown in the Event feed.  | User is taken to the detailed event page.  | Works as expected. |
 
+<details>
 <summary>Images</summary>
 <img src="docs/manual_testing/man_test_us_17_test_1.png">
 <img src="docs/manual_testing/man_test_us_17_test_2.png">
@@ -832,47 +840,127 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 | Event Detail   | User clicks on an event they are interested in. | User is taken to the detailed event page.  | Works as expected. |
 | Comments   | User scrolls down to comment section. | User can view the comments. | Works as expected. |
 
+<details>
 <summary>Images</summary>
-<img src="docs/manual_testing/man_test_us_20_test_1.png">
-<img src="docs/manual_testing/man_test_us_20_test_2.png">
-<img src="docs/manual_testing/man_test_us_20_test_3.png">
+<img src="docs/manual_testing/man_test_us_19_test_1.png">
+<img src="docs/manual_testing/man_test_us_19_test_2.png">
+<img src="docs/manual_testing/man_test_us_19_test_3.png">
 </details>
 
 20. As an event creator I can edit my event details so that I can make corrections or updates to my event after it was created.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   | |
+| Event Detail   | User clicks on an event they have created. | User is taken to the detailed event page.  | Works as expected. |
+| Event Edit Menu   | User clicks the 'hamburger' icon in the top right of the event page. | The edit menu is shown, giving the user various actions.  | Works as expected. |
+| Event Edit Menu   | User clicks the on the pen and paper icon. | The user is taken to the event edit form.  | Works as expected. |
+| Event Edit Form   | User changes the information on the form and submits. | User is redirected and the event details are updated.  | Works as expected. |
+
+<details>
+<summary>Images</summary>
+<img src="docs/manual_testing/man_test_us_20_test_1.png">
+<img src="docs/manual_testing/man_test_us_20_test_2.png">
+<img src="docs/manual_testing/man_test_us_20_test_3.png">
+<img src="docs/manual_testing/man_test_us_20_test_4.png">
+<img src="docs/manual_testing/man_test_us_20_test_5.png">
+<img src="docs/manual_testing/man_test_us_20_test_6.png">
+<img src="docs/manual_testing/man_test_us_20_test_7.png">
+</details>
 
 21. As a logged in user I can add comments to an event so that I can share my thoughts.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   | |
+| Event Feed   | User views any event feed.  | Events are displayed to the user.   | Works as expected. |
+| Event Preview   | User clicks on an event they are interested in.  | User is direected to the event detail page.   | Works as expected. |
+| Event Detail   | User scrolls to bottom of page to see the comment box.  | Comment box is displayed.   | Works as expected. |
+| Comment Form   | User types in their comment and submits.  | User's comment is posted and displayed.   | Works as expected. |
+
+<details>
+<summary>Images</summary>
+<img src="docs/manual_testing/man_test_us_21_test_1.png">
+<img src="docs/manual_testing/man_test_us_21_test_2.png">
+<img src="docs/manual_testing/man_test_us_21_test_3.png">
+<img src="docs/manual_testing/man_test_us_21_test_4.png">
+<img src="docs/manual_testing/man_test_us_21_test_5.png">
+</details>
+
 
 22. As a user I can see how long ago a comment was made so that I know how old a comment is.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   | |
+| Event Feed   | User views any event feed.  | Events are displayed to the user.   | Works as expected. |
+| Event Preview   | User clicks on an event they are interested in.  | User is direected to the event detail page.   | Works as expected. |
+| Event Detail   | User scrolls to bottom of page to see the comments.  | Comments are displayed.   | Works as expected. |
+| Comments  | User views the comments.  | A date-posted is displayed next to the usernames.   | Works as expected. |
+
+<details>
+<summary>Images</summary>
+<img src="docs/manual_testing/man_test_us_22_test_1.png">
+<img src="docs/manual_testing/man_test_us_22_test_2.png">
+<img src="docs/manual_testing/man_test_us_22_test_3.png">
+
+</details>
 
 23. As a user I can read comments on events so that I can read what other users think and see any updates.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   | |
+| Event Feed   | User views any event feed.  | Events are displayed to the user.   | Works as expected. |
+| Event Preview   | User clicks on an event they are interested in.  | User is direected to the event detail page.   | Works as expected. |
+| Event Detail   | User scrolls to bottom of page to see the comments.  | Comments are displayed.   | Works as expected. |
+
+<details>
+<summary>Images</summary>
+<img src="docs/manual_testing/man_test_us_23_test_1.png">
+<img src="docs/manual_testing/man_test_us_23_test_2.png">
+<img src="docs/manual_testing/man_test_us_23_test_3.png">
+
+</details>
 
 24. As an owner of a comment I can delete my comment so that I can control removal of my comment from the application.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   | |
+| Event Feed   | User views any event feed.  | Events are displayed to the user.   | Works as expected. |
+| Event Preview   | User clicks on an event they are interested in.  | User is direected to the event detail page.   | Works as expected. |
+| Event Detail   | User scrolls to bottom of page to see the comments.  | Comments are displayed.   | Works as expected. |
+| Comments  | Comment owner clicks 'hamburger' icon.  | Comment dropdown menu is displayed.   | Works as expected. |
+| Comments DropDown  | Comment owner clicks the 'trashcan' icon.  | Comment is deleted and removed from the display.   | Works as expected. |
+
+<details>
+<summary>Images</summary>
+<img src="docs/manual_testing/man_test_us_24_test_1.png">
+<img src="docs/manual_testing/man_test_us_24_test_2.png">
+<img src="docs/manual_testing/man_test_us_24_test_3.png">
+<img src="docs/manual_testing/man_test_us_24_test_4.png">
+<img src="docs/manual_testing/man_test_us_24_test_5.png">
+<img src="docs/manual_testing/man_test_us_24_test_6.png">
+
+</details>
 
 25. As an owner of a comment I can edit my comment so that I can fix or update my existing comment.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   | |
+| Event Feed   | User views any event feed.  | Events are displayed to the user.   | Works as expected. |
+| Event Preview   | User clicks on an event they are interested in.  | User is direected to the event detail page.   | Works as expected. |
+| Event Detail   | User scrolls to bottom of page to see the comments.  | Comments are displayed.   | Works as expected. |
+| Comments  | Comment owner clicks 'hamburger' icon.  | Comment dropdown menu is displayed.   | Works as expected. |
+| Comments DropDown  | Comment owner clicks the pen and paper icon.  | A new comment form is displayed.   | Works as expected. |
+| Comment Edit Form  | User edits the comment and clicks save.  | Comment is posted and updated.   | Works as expected. |
+
+<details>
+<summary>Images</summary>
+<img src="docs/manual_testing/man_test_us_25_test_1.png">
+<img src="docs/manual_testing/man_test_us_25_test_2.png">
+<img src="docs/manual_testing/man_test_us_25_test_3.png">
+<img src="docs/manual_testing/man_test_us_25_test_4.png">
+<img src="docs/manual_testing/man_test_us_25_test_5.png">
+<img src="docs/manual_testing/man_test_us_25_test_6.png">
+
+</details>
 
 26. As a user I can view other users' profiles so that I can see their content and learn more about them.
 
