@@ -663,7 +663,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   | |
+| Web Tokens | Web Tokens added to code.   | User is not timed out after a set period of time  | Works as expected  |
 
 7. As a logged out user I can see sign in and sign up options so that I can sign in/sign up.
 
