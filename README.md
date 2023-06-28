@@ -966,44 +966,131 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   | |
+| Event Feed   | User views any event feed.  | Popular profiles are shown to the user.   | Works as expected. |
+| Popular Profiles   | User clicks on a displayed profile to view it.  | User is direected to the profile page.   | Works as expected. |
+| Profile Avatar   | User views the website content. | Avatars shown on events and comments.   | Works as expected. |
+| Avatars  | User clicks on a displayed avatar.  | User is directed to the avatar owners profile page.   | Works as expected. |
+
+<details>
+<summary>Images</summary>
+<img src="docs/manual_testing/man_test_us_26_test_1.png">
+<img src="docs/manual_testing/man_test_us_26_test_2.png">
+<img src="docs/manual_testing/man_test_us_26_test_3.png">
+<img src="docs/manual_testing/man_test_us_26_test_4.png">
+
+</details>
 
 27. As a user I can see a list of the most followed profiles so that I can see which creators are popular.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   | |
+| Event Feed   | User views any event feed.  | Popular profiles are shown to the user.   | Works as expected. |
+| Popular Profiles   | User clicks on a displayed profile to view it.  | User is directed to the profile page.   | Works as expected. |
+
+<details>
+<summary>Images</summary>
+<img src="docs/manual_testing/man_test_us_26_test_1.png">
+<img src="docs/manual_testing/man_test_us_26_test_2.png">
+
+</details>
 
 28. As a user I can view statistics about a specific user: bio, number of events, number of events attended, followers and users followed so that I can learn more about them.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   | |
+| Popular Profiles   | User clicks on a displayed profile to view it.  | User is direected to the profile page.   | Works as expected. |
+| Profile Avatar   | User views the website content. | Avatars shown on events and comments.   | Works as expected. |
+| Avatars  | User clicks on a displayed avatar.  | User is directed to the avatar owners profile page.   | Works as expected. |
+
+<details>
+<summary>Images</summary>
+<img src="docs/manual_testing/man_test_us_26_test_1.png">
+<img src="docs/manual_testing/man_test_us_26_test_2.png">
+<img src="docs/manual_testing/man_test_us_26_test_3.png">
+<img src="docs/manual_testing/man_test_us_26_test_4.png">
+
+</details>
 
 29. As a logged in user I can follow and unfollow other users so that I can see and remove events by specific users in my feed.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   | |
+| Event Feed   | User views any event feed.  | Popular profiles are shown to the user.   | Works as expected. |
+| Popular Profiles   | User clicks follow button next to the username.  | User is now 'following' another user..   | Works as expected. |
+| Profile Page   | User views a profile page. | User is directed to the profile page and can click a follow button.   | Works as expected. |
+
+<details>
+<summary>Images</summary>
+<img src="docs/manual_testing/man_test_us_29_test_1.png">
+<img src="docs/manual_testing/man_test_us_29_test_2.png">
+<img src="docs/manual_testing/man_test_us_29_test_3.png">
+<img src="docs/manual_testing/man_test_us_29_test_4.png">
+<img src="docs/manual_testing/man_test_us_29_test_5.png">
+
+</details>
+
 
 30. As a user I can view all the content by a specific user so that I can catch up on their latest events, or decide I want to follow them.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   | |
+| Profile Page   | User views a profile page. | User is directed to the profile page and can view all posts by that user.   | Works as expected. |
+
+<details>
+<summary>Images</summary>
+<img src="docs/manual_testing/man_test_us_30_test_1.png">
+<img src="docs/manual_testing/man_test_us_30_test_2.png">
+
+</details>
 
 31. As a logged in user I can edit my profile so that I can change my profile picture and bio.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   | |
+| NavBar | User clicks on their own avatar. |  User views their own profile page.   | Works as expected. |
+| Profile Page   | User views their own profile. | Profile stats are shown,   | Works as expected. |
+| Profile Page   | User clicks the hamburger icon in the top right. | Profile edit dropdown is displayed.   | Works as expected. |
+| Profile Dropdown   | USer clicks on the pen and paper icon. | User is taken to a profile edit page.   | Works as expected. |
+| Profile Edit Form | User fills in form and clicks submit. | Profile is updated and shows new info.   | Works as expected. |
+
+<details>
+<summary>Images</summary>
+<img src="docs/manual_testing/man_test_us_31_test_1.png">
+<img src="docs/manual_testing/man_test_us_31_test_2.png">
+<img src="docs/manual_testing/man_test_us_31_test_3.png">
+<img src="docs/manual_testing/man_test_us_31_test_4.png">
+<img src="docs/manual_testing/man_test_us_31_test_5.png">
+<img src="docs/manual_testing/man_test_us_31_test_6.png">
+
+</details>
+
+
 
 32. As a logged in user I can update my username and password so that I can change my display name and keep my profile secure.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   | |
+| NavBar | User clicks on their own avatar. |  User views their own profile page.   | Works as expected. |
+| Profile Page   | User views their own profile. | Profile stats are shown,   | Works as expected. |
+| Profile Page   | User clicks the hamburger icon in the top right. | Profile edit dropdown is displayed.   | Works as expected. |
+| Profile Dropdown   | User clicks the ID card icon. | User is taken to a username edit page.   | Works as expected. |
+| Username Edit Form | User fills in form and clicks submit. | Profile is updated and shows new info.   | Works as expected. |
+| Profile Page   | User clicks the hamburger icon in the top right. | Profile edit dropdown is displayed.   | Works as expected. |
+| Profile Dropdown   | User clicks the key icon. | User is taken to a password edit page.   | Works as expected. |
+| Password Edit Form | User fills in form and clicks submit. | Profile is updated.  | Works as expected. |
 
+<details>
+<summary>Images</summary>
+<img src="docs/manual_testing/man_test_us_31_test_1.png">
+<img src="docs/manual_testing/man_test_us_31_test_2.png">
+<img src="docs/manual_testing/man_test_us_31_test_3.png">
+<img src="docs/manual_testing/man_test_us_32_test_1.png">
+<img src="docs/manual_testing/man_test_us_32_test_2.png">
+<img src="docs/manual_testing/man_test_us_32_test_3.png">
+<img src="docs/manual_testing/man_test_us_32_test_4.png">
+<img src="docs/manual_testing/man_test_us_32_test_5.png">
+
+</details>
 
 ##### Back to [top](#event-horizon)
 

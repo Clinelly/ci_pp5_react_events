@@ -58,9 +58,9 @@ const UserPasswordForm = () => {
         <Container className={appStyles.Content}>
           <Form onSubmit={handleSubmit}>
             <Form.Group>
-              <Form.Label>CHange Your Password:</Form.Label>
+              <Form.Label>Change Your Password:</Form.Label>
               <Form.Control
-                placeholder="new password"
+                placeholder="New Password"
                 type="password"
                 value={new_password1}
                 onChange={handleChange}
@@ -75,7 +75,7 @@ const UserPasswordForm = () => {
             <Form.Group>
               <Form.Label>Confirm New Pasword:</Form.Label>
               <Form.Control
-                placeholder="confirm new password"
+                placeholder="Confirm New Password"
                 type="password"
                 value={new_password2}
                 onChange={handleChange}
