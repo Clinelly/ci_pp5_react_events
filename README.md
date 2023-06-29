@@ -545,21 +545,23 @@ NOTE: Problems with loading eslint into Heroku meant that eslint had to be remov
 
 Lighthouse was used to test the performance, accessibility, best practice and SEO of the site. The validation was done for both desktop & mobile.  
 
-<details><summary>Results</summary>
 
-<details><summary>Main page (not logged in)</summary> 
-<img src=""> 
+<details><summary>Images</summary> 
+<img src="docs/validation/lighthouse_signup.png">
+<img src="docs/validation/lighthouse_signin.png"> 
+<img src="docs/validation/lighthouse_profile.png"> 
+<img src="docs/validation/lighthouse_home.png">
+<img src="docs/validation/lighthouse_eventfeeds.png">  
+<img src="docs/validation/lighthouse_eventdetail.png"> 
+<img src="docs/validation/lighthouse_eventcreate.png"> 
 </details>
 
 
 ### Wave Validation
 
 The WAVE WebAIM web accessibility evaluation tool was used to test the websites accessibility.
+There were issues that I could not resolve when setting up WebAIM to assess my website - WebAIM would not load content and was only assessing the 404 page, regardless of what URLs I tried to use. Ultimately I used the Lighthouse scores above to assess my website's accessibility.
 
-<details><summary>Results</summary> 
-<details><summary>Main page (not logged in)</summary> 
-<img src=""> 
-</details>
 
 
 ##### Back to [top](#event-horizon)
@@ -666,7 +668,7 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|    |   |   | |
+|  JWT  | Web Tokens added to code.  | Prevents user timeout.  | Works as expected. |
 
 7. As a logged out user I can see sign in and sign up options so that I can sign in/sign up.
 
@@ -1102,7 +1104,10 @@ To avoid unnecessary repetition of images, only the feature being referred to wi
 
 | **Bug** | **Fix** |
 | ------- | ------- |
-
+| Default profile image does not load | Change default image link. |
+| Event information does not show hours. |Change date/time format. |
+| Links not working during CRUD elements | Add '/' to links. |
+| Filters not working. | Add filtersets to back end. |
 
 
 ##### Back to [top](#event-horizon)
@@ -1190,8 +1195,6 @@ You can make a local clone of a repository via the following steps:
 
 
 ## Credits
-
-### Tutorials
 
 
 ### Code
