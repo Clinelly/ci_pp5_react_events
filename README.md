@@ -510,7 +510,7 @@ Although alot of effort was put into this project, due to time constraints there
 
 The W3C Markup Validation Service was used to validate the HTML of the website. No errors were identified. There were some information tags highlighted due to the formatting of JSX components.
 
-<details><summary>Main page (not logged in)</summary> 
+<details><summary>Main page</summary> 
 <img src=""> 
 </details>
 
@@ -521,7 +521,7 @@ The W3C Markup Validation Service was used to validate the HTML of the website. 
 The W3C Jigsaw CSS Validation Service was used to validate the CSS of the website. All CSS modules pass the validation with no errors.
 
 <details><summary>Images</summary> 
-<img src=""> 
+<img src="docs/validation/css_validation.png"> 
 </details> 
 
 
