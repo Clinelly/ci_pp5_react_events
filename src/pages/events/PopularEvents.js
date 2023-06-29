@@ -25,7 +25,7 @@ const PopularEvents = ({ mobile }) => {
           popularEvents: data,
         }));
       } catch (err) {
-        console.log(err);
+        // console.log(err);
       }
     };
     handleMount();

@@ -1,9 +1,9 @@
 # Event Horizon
 Developer: Stuart Wall
 
-![Mockup image]()
+![Mockup image](docs/wireframes/amiresponsive.png)
 
-[View live website]()
+[View live website](https://clinelly-ci-pp5-events-fe.herokuapp.com/)
 
 
 ## Table of Contents
@@ -159,12 +159,7 @@ Event Horizon handles data with full CRUD Functionality:
 
 ### Colours
 
-The colour scheme for this application was kept minimal with a monochromatic theme kept in mind. 
-
-<details>
-<summary>Colours</summary>
-<img src="">
-</details>
+The colour scheme for this application was kept minimal with a blue/white theme kept in mind. 
 
 
 ### Fonts
@@ -510,8 +505,13 @@ Although alot of effort was put into this project, due to time constraints there
 
 The W3C Markup Validation Service was used to validate the HTML of the website. No errors were identified. There were some information tags highlighted due to the formatting of JSX components.
 
-<details><summary>Main page</summary> 
-<img src=""> 
+<details><summary>Images</summary> 
+<img src="docs/validation/html_validation_event_create.png">
+<img src="docs/validation/html_validation_event_page.png"> 
+<img src="docs/validation/html_validation_home_nli.png"> 
+<img src="docs/validation/html_validation_home_li.png"> 
+<img src="docs/validation/html_validation_profile.png">  
+<img src="docs/validation/html_validation_event_feed.png">  
 </details>
 
 
@@ -1118,57 +1118,33 @@ The website was deployed with Heroku by following these steps:
 2. The app uses Cloudinary to host the post images therefore a Cloudinary account will be required. 
 3. Log in to [Cloudinary](https://cloudinary.com/) or create an account for free.
 4. Navigate to the Dashboard on Cloudinary
-<details>
-<summary>Screenshot</summary>
-<img src="">
-</details>
+
 
 5. Copy and store the value of the 'API Environment Variable" beginning at cloudinary:// until the end, this will be used in the Heroku Config Vars. 
 6. The app also uses ElephantSQL to host the database
 7. Log in to [ElephantSQL](https://www.elephantsql.com/) or create an account for free.
 8. Click on Create a new instance
-<details>
-<summary>Screenshot</summary>
-<img src="">
-</details>
+
 
 9. Set up your plan. Give the 'plan' the desired name, select the Tiny Turtle (free) plan and leave tags blank.
-<details>
-<summary>Screenshot</summary>
-<img src="">
-</details>
+
 
 10. Select the region and choose the nearest data centre to your location.
-<details>
-<summary>Screenshot</summary>
-<img src="">
-</details>
+
 
 11. Click 'review' and if happy with the details presented click on the create instance button.
-<details>
-<summary>Screenshot</summary>
-<img src="">
-</details>
+
 
 12. From the instances section click on the instance with the name that was just created.
 13. Get the ElephantSQL database URL from the instance details page and copy, this will be used in the Heroku Config Vars
-<details>
-<summary>Screenshot</summary>
-<img src="">
-</details>
+
 
 14. Navigate to https://www.heroku.com/ and login or create an account. 
 15. Click the "new" button in the upper right corner and select "create new app".
-<details>
-<summary>Screenshot</summary>
-<img src="">
-</details>
+
 
 16. Choose an app name and your region and click "Create app".
-<details>
-<summary>Screenshot</summary>
-<img src="">
-</details>
+
 
 17. Reveal Config Vars and store the required config var names and values as below:
 
@@ -1177,10 +1153,6 @@ The website was deployed with Heroku by following these steps:
 - `PORT`: `8000`
 - `SECRET_KEY`: *your secret key*
 
-<details>
-<summary>Screenshot</summary>
-<img src="">
-</details>
 
 18. Go to the "deploy" tab and pick GitHub as a deployment method.
 19. Search for a repository to connect to and select the branch you would like to build the app from.
@@ -1227,6 +1199,18 @@ You can make a local clone of a repository via the following steps:
  - The basis of this project was inspired by the 'Moments' social media platform walk-through project with Code Institute. Using this a a basis for user log in, profile creation and posting to the API I have built my own app and added extra functionality.
 
 ### Literature
+
+Image by <a href="https://pixabay.com/users/io-images-1096650/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1118929">Stephan</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1118929">Pixabay</a>
+
+<a href="https://www.flaticon.com/free-icons/error" title="error icons">Error icons created by Freepik - Flaticon</a>
+
+Image by <a href="https://pixabay.com/users/pexels-2286921/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1853662">Pexels</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1853662">Pixabay</a>
+
+Image by <a href="https://pixabay.com/users/stocksnap-894430/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2557396">StockSnap</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2557396">Pixabay</a>
+
+Image by <a href="https://pixabay.com/users/broesis-5213623/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2366955">Maike und Björn Bröskamp</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2366955">Pixabay</a>
+Image by <a href="https://pixabay.com/users/mynorbejarano-8066127/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3308013">Mynor Bejarano</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3308013">Pixabay</a>
+Image by <a href="https://pixabay.com/users/pasja1000-6355831/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3315072">❄️♡💛♡❄️ Julita ❄️♡💛♡❄️</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3315072">Pixabay</a>
 
 
 

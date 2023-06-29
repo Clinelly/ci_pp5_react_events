@@ -61,7 +61,7 @@ function EventEditForm() {
             })
           : history.push("/");
       } catch (err) {
-        console.log(err);
+        // console.log(err);
       }
     };
     handleMount();
@@ -107,7 +107,7 @@ function EventEditForm() {
       await axiosReq.put(`/events/${id}/`, formData);
       history.push(`/events/${id}`);
     } catch (err) {
-      console.log(err);
+      // console.log(err);
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
       }
