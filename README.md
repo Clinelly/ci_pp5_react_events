@@ -146,7 +146,7 @@ An Agile approach to creating this app has been applied. GitHub's projects was u
 
 By using AGILE methodology in this project I was able to deliver a site which had all required functionality and some more. Due to the time limit on this project I was not able to incorporate all initial listed features, but this is where an AGILE approach is great for app design. The project displays this by having User stories in the Done section and the ones which were decided to be left for future, put in the future implementations section of the readme.
 
-The GitHub project can be found [here]()
+The GitHub project can be found [here](https://github.com/users/Clinelly/projects/5/views/1?layout=board)
 
 ### CRUD Functionality
 
@@ -538,6 +538,8 @@ All JavaScript files were validated using ESLint JavaScript validator. All files
   - `"react/prop-types": 0` was used to suppress the errors relating to prop-types
   - `"react/no-children-prop": "off"` was used to suppress the errors related to the Infinit Scroll component using children={} 
   - `"react/display-name": "off"` was used to suppress the need for a component display name 
+
+NOTE: Problems with loading eslint into Heroku meant that eslint had to be removed.
 
 ### Chrome Dev Tools Lighthouse Validation
 
